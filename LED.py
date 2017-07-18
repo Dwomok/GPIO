@@ -11,6 +11,8 @@ button = Button(2)
    # led.off()
    # sleep(1)
 button.when_pressed = led.on
+#while button.when_pressed = led.on
+#	exec MARGARET 
 button.when_released = led.off
 
 pause()

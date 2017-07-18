@@ -20,57 +20,14 @@ CODE = {'A': '.-',     'B': '-...',   'C': '-.-.',
         '9': '----.' 
         }
 
-def dot():
-	led.on()
-	sleep(1)
-	led.off()
-	sleep(1)
 
-def dash():
-	led.on()
-	sleep(0.5)
-	led.off()
-	sleep(0.5)
-
-def A():
-	dot()
-	dash()
-
-def M():
-	dash()
-	dot()
-	dot()
-	dot()
-def S():
-	dot()
-	dash()
+def main():
+	button = Button(2)
+	msg = 'MESSAGE'
 	
-
-button = Button(2)
-
-def name():
-	S()
-	A()
-	M()
-
-button.when_pressed = name
-#utton.when_pressed = led.on
-#utton.when_released = led.off
-
-pause()
-
-
-	
-while True:
-	i=6
-	while i <6:
-		dot()
-		dash()
+	for char in msg:
+		#print CODE[char.upper()],
+		button.when_pressed = CODE[msg],
 		
-
-
-
-
-
-				
-					
+if __name__ == "__main__":
+	main()
